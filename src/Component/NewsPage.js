@@ -14,9 +14,9 @@ const NewsPage = () => {
     setnewsData(jsonData.articles)
     }
     
-    useEffect(()=>{
-        getData()
-    }, [])
+    useEffect(() => {
+        getData();
+      },);
 
     const handleInput = (e)=>{
         console.log(e.target.value);
@@ -25,7 +25,8 @@ const NewsPage = () => {
     const userInput = (e) =>{
         setsearch(e.target.value)
     }
-
+    
+     
   return (
     <div>
         <nav>
@@ -35,8 +36,9 @@ const NewsPage = () => {
                 </h1>
             </div>
             <ul>
-                <a>All News</a>
-                <a>Trending News</a>
+                
+                <a href='/news'>All News</a>
+                <a href='/trending'>Trending News</a>
             </ul>
             <div className='searchbar'>
                 <input type='text' placeholder='Search News' value={search} onChange={handleInput}/>
